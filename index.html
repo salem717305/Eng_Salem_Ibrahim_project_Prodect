@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="shortcut icon" href="https://clinika.modeltheme.com/wp-content/themes/clinika/images/theme_clinika_favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="loader-page">
+        <div class="loader"></div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="input-group">
+                <label for="proName">Product Name:-</label>
+                <input type="text" placeholder="Samsung..." name="pName" id="proName" />
+            </div>
+
+            <div class="input-group">
+                <label for="proPrice">Product Price:-</label>
+                <input type="number" placeholder="6000" name="pPrice" id="proPrice" />
+            </div>
+
+            <div class="input-group">
+                <label for="proCategory">Product Category:-</label>
+                <input type="text" placeholder="Screens..." name="pCategory" id="proCategory" />
+            </div>
+
+            <div class="input-group">
+                <label for="proDesc">Product Description:-</label>
+                <input type="text" placeholder="des....." name="pDesc" id="proDesc" />
+            </div>
+
+            <button class="btn" id="btn">Add Product</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <input type="text" name="searchPro" placeholder="Search...." id="proSearch" />
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <th>Index</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody id="tbody">
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/master.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing : border-box;
+    margin     : 0;
+    padding    : 0;
+    font-family: "Cairo", sans-serif;
+    font-family: "Edu AU VIC WA NT Hand ", cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding-left : 15px;
+    padding-right: 15px;
+    margin-left  : auto;
+    margin-right : auto;
+}
+
+
+/* Small */
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+
+/* Medium */
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+
+/* Large */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* end global rules */
+
+:root {
+    --mainColor: #554edd;
+    --btnColor : #e37373;
+    --btnColor2: #e3c373;
+}
+
+::-webkit-scrollbar {
+    width           : 10px;
+    height          : 8px;
+    background-color: #dae3ee;
+    /* or add it to the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background   : #554edd;
+    border-radius: 10px;
+}
+
+body {
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background : linear-gradient(to right, #dae3ee, #729ceb);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background : #141E30;
+    /* fallback for old browsers */
+}
+
+section {
+    padding         : 50px 20px;
+    margin          : 20px;
+    background-color: #729ceb7c;
+    box-shadow      : rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius   : 10px;
+}
+
+label {
+    display: block;
+    color  : #fff;
+}
+
+.input-group {
+    padding: 10px;
+}
+
+input {
+    width        : 100%;
+    padding      : 10px;
+    border       : 0;
+    outline      : 0;
+    margin-top   : 15px;
+    border-radius: 5px;
+}
+
+input:focus {
+    box-shadow: 0 0 0 .25rem rgba(93, 243, 231, 0.25);
+}
+
+.btn {
+    display         : block;
+    padding         : 8px 15px;
+    outline         : 0;
+    border          : 0;
+    background-color: #554edd;
+    color           : #fff;
+    margin          : 10px auto;
+    transition      : background-color .5s;
+    border-radius   : 5px;
+}
+
+.btn:hover {
+    background-color: #554eddb8;
+    cursor          : pointer;
+}
+
+.table-responsive {
+    width        : 80%;
+    margin       : 20px auto;
+    overflow     : auto;
+    border-radius: 5px;
+}
+
+table {
+    width    : 100%;
+    min-width: 800px;
+}
+
+thead th {
+    color: white;
+}
+
+tbody tr td {
+    text-align: center;
+    color     : white;
+}
+
+tbody tr td:last-child {
+    display: flex;
+}
+
+.btn.delete {
+    background-color: #e37373;
+}
+
+.btn.delete:hover {
+    background-color: #e37373af;
+}
+
+.btn.update {
+    background-color: #e3c373;
+}
+
+.btn.update:hover {
+    background-color: #e3c37390;
+}
+
+.loader-page {
+    position        : fixed;
+    inset           : 0;
+    background-color: #e37373;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    opacity         : 1;
+    transition      : 1s opacity;
+}
+
+
+/* HTML: <div class="loader"></div> */
+
+.loader {
+    width            : 50px;
+    aspect-ratio     : 1;
+    --c              : no-repeat radial-gradient(farthest-side, #fff 92%, #0000);
+    background       : var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+    background-size  : 10px 10px;
+    -webkit-animation: l18 1s infinite;
+    animation        : l18 1s infinite;
+    position         : relative;
+}
+
+.loader::before {
+    content      : "";
+    position     : absolute;
+    inset        : 0;
+    margin       : 3px;
+    background   : repeating-conic-gradient(#0000 0 35deg, #fff 0 90deg);
+    -webkit-mask : radial-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
+    border-radius: 50%;
+}
+
+@-webkit-keyframes l18 {
+    100% {
+        transform: rotate(.5turn)
+    }
+}
+
+@keyframes l18 {
+    100% {
+        transform: rotate(.5turn)
+    }
+}
